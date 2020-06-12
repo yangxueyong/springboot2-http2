@@ -1,0 +1,20 @@
+server:
+  port: 8443
+  http1.1:
+    port: 8080
+  compression:
+    enabled: true
+  http2:
+    enabled: true
+  ssl:
+    enabled: true
+    key-store: classpath:p12demo1123456.p12
+    key-store-password: 123456
+    key-store-type: PKCS12
+    protocol: TLSv1.2
+    key-alias: serverkey
+  undertow:
+    io-threads: 2
+    worker-threads: 36
+    buffer-size: 1024
+    directBuffers: true
